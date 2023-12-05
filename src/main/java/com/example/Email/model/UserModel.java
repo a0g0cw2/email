@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="Ascend")
+@Document(collection="User")
 public class UserModel {
 
 	@Id

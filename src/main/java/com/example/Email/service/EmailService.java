@@ -1,6 +1,7 @@
 package com.example.Email.service;
 
 import java.io.File;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -363,7 +364,7 @@ public class EmailService {
     	String DBresponse = "";
     	try {
     		
-    		String decryptedString = decrypt(validationCode, secKey);
+    		String decryptedString = decrypt(URLDecoder.decode(validationCode,"UTF-8"), secKey);
     		if (!decryptedString.isEmpty())
     		{
 	    		String email = decryptedString.substring(0, decryptedString.indexOf(encryptionPart));

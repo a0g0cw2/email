@@ -70,7 +70,7 @@ public class EmailController {
 		
 		for (Map.Entry<String,String> eachvalue : payload.entrySet()) 
 		{
-            if(eachvalue.getKey()=="emailId")
+            if(eachvalue.getKey()=="email")
             {
             	mailId=eachvalue.getValue();
             }
@@ -136,7 +136,7 @@ public class EmailController {
 		{
 			for (Map.Entry<String,String> eachvalue : payload.entrySet()) 
 			{
-	            if(eachvalue.getKey()=="emailId")
+	            if(eachvalue.getKey()=="email")
 	            {
 	            	mailId=eachvalue.getValue();
 	            }
